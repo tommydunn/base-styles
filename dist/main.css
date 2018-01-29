@@ -4,7 +4,6 @@
   to {
     transform: rotate(359deg); } }
 
-/*! minireset.css v0.0.2 | MIT License | github.com/jgthms/minireset.css */
 html,
 body,
 p,
@@ -28,8 +27,8 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin: 0; }
 
 h1,
 h2,
@@ -68,8 +67,8 @@ iframe {
   border: 0; }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+  border-collapse: collapse; }
 
 td,
 th {
@@ -80,7 +79,6 @@ html {
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
-  font-size: 16px;
   background-color: white;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -926,7 +924,7 @@ a.box:active {
   margin-bottom: 1.5rem; }
 
 .content li + li {
-  margin-top: 0.25em; }
+  margin-top: .25em; }
 
 .content p:not(:last-child),
 .content dl:not(:last-child),
@@ -937,63 +935,23 @@ a.box:active {
 .content table:not(:last-child) {
   margin-bottom: 1em; }
 
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
-  color: #363636;
-  font-weight: 400;
-  line-height: 1.125; }
-
-.content h1 {
-  font-size: 2em;
-  margin-bottom: 0.5em; }
-  .content h1:not(:first-child) {
-    margin-top: 1em; }
-
-.content h2 {
-  font-size: 1.75em;
-  margin-bottom: 0.5714em; }
-  .content h2:not(:first-child) {
-    margin-top: 1.1428em; }
-
-.content h3 {
-  font-size: 1.5em;
-  margin-bottom: 0.6666em; }
-  .content h3:not(:first-child) {
-    margin-top: 1.3333em; }
-
-.content h4 {
-  font-size: 1.25em;
-  margin-bottom: 0.8em; }
-
-.content h5 {
-  font-size: 1.125em;
-  margin-bottom: 0.8888em; }
-
-.content h6 {
-  font-size: 1em;
-  margin-bottom: 1em; }
-
 .content blockquote {
+  padding: 1.25em 1.5em;
   background-color: whitesmoke;
-  border-left: 5px solid #dbdbdb;
-  padding: 1.25em 1.5em; }
+  border-left: 5px solid #dbdbdb; }
 
 .content ol {
-  list-style: decimal outside;
+  margin-top: 1em;
   margin-left: 2em;
-  margin-top: 1em; }
+  list-style: decimal outside; }
 
 .content ul {
-  list-style: disc outside;
+  margin-top: 1em;
   margin-left: 2em;
-  margin-top: 1em; }
+  list-style: disc outside; }
   .content ul ul {
-    list-style-type: circle;
-    margin-top: 0.5em; }
+    margin-top: .5em;
+    list-style-type: circle; }
     .content ul ul ul {
       list-style-type: square; }
 
@@ -1001,8 +959,8 @@ a.box:active {
   margin-left: 2em; }
 
 .content figure {
-  margin-left: 2em;
   margin-right: 2em;
+  margin-left: 2em;
   text-align: center; }
   .content figure:not(:first-child) {
     margin-top: 2em; }
@@ -1014,11 +972,11 @@ a.box:active {
     font-style: italic; }
 
 .content pre {
-  -webkit-overflow-scrolling: touch;
-  overflow-x: auto;
   padding: 1.25em 1.5em;
+  overflow-x: auto;
+  word-wrap: normal;
   white-space: pre;
-  word-wrap: normal; }
+  -webkit-overflow-scrolling: touch; }
 
 .content sup,
 .content sub {
@@ -1028,10 +986,10 @@ a.box:active {
   width: 100%; }
   .content table td,
   .content table th {
-    border: 1px solid #dbdbdb;
-    border-width: 0 0 1px;
     padding: 0.5em 0.75em;
-    vertical-align: top; }
+    vertical-align: top;
+    border: 1px solid #dbdbdb;
+    border-width: 0 0 1px; }
   .content table th {
     color: #363636;
     text-align: left; }
@@ -1039,12 +997,12 @@ a.box:active {
     background-color: whitesmoke; }
   .content table thead td,
   .content table thead th {
-    border-width: 0 0 2px;
-    color: #363636; }
+    color: #363636;
+    border-width: 0 0 2px; }
   .content table tfoot td,
   .content table tfoot th {
-    border-width: 2px 0 0;
-    color: #363636; }
+    color: #363636;
+    border-width: 2px 0 0; }
   .content table tbody tr:last-child td,
   .content table tbody tr:last-child th {
     border-bottom-width: 0; }
@@ -1128,41 +1086,14 @@ a.box:active {
   .subtitle .tag {
     vertical-align: middle; }
 
-.title {
-  color: #363636;
-  font-size: 2rem;
-  font-weight: 600;
-  line-height: 1.125; }
-  .title strong {
-    color: inherit;
-    font-weight: inherit; }
-  .title + .highlight {
-    margin-top: -0.75rem; }
-  .title:not(.is-spaced) + .subtitle {
-    margin-top: -1.5rem; }
-  .title.is-1 {
-    font-size: 3rem; }
-  .title.is-2 {
-    font-size: 2.5rem; }
-  .title.is-3 {
-    font-size: 2rem; }
-  .title.is-4 {
-    font-size: 1.5rem; }
-  .title.is-5 {
-    font-size: 1.25rem; }
-  .title.is-6 {
-    font-size: 1rem; }
-  .title.is-7 {
-    font-size: 0.75rem; }
-
 .subtitle {
-  color: #4a4a4a;
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 1.25; }
+  line-height: 1.25;
+  color: #4a4a4a; }
   .subtitle strong {
-    color: #363636;
-    font-weight: 600; }
+    font-weight: 600;
+    color: #363636; }
   .subtitle:not(.is-spaced) + .title {
     margin-top: -1.5rem; }
   .subtitle.is-1 {

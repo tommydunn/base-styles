@@ -1,6 +1,6 @@
 {
   "name": "tld-base-styles",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My base styles that I use on every project",
   "main": "scss/main.scss",
   "scripts": {
@@ -11,10 +11,10 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tommydunn/tommys-base-css.git"
+    "url": "git+https://github.com/tommydunn/base-css.git"
   },
   "bugs": {
-    "url": "https://github.com/tommydunn/tommys-base-css/issues"
+    "url": "https://github.com/tommydunn/base-css/issues"
   },
   "devDependencies": {
     "gulp": "^3.9.1",

@@ -1,16 +1,13 @@
 $content-heading-color: $text-strong !default;
 $content-heading-weight: $weight-normal !default;
 $content-heading-line-height: 1.125 !default;
-
 $content-blockquote-background-color: $background !default;
 $content-blockquote-border-left: 5px solid $border !default;
 $content-blockquote-padding: 1.25em 1.5em !default;
-
 $content-pre-padding: 1.25em 1.5em !default;
-
 $content-table-cell-border: 1px solid $border !default;
 $content-table-cell-border-width: 0 0 1px !default;
-$content-table-cell-padding: 0.5em 0.75em !default;
+$content-table-cell-padding: .5em .75em !default;
 $content-table-cell-heading-color: $text-strong !default;
 $content-table-row-hover-background-color: $background !default;
 $content-table-head-cell-border-width: 0 0 2px !default;
@@ -23,7 +20,7 @@ $content-table-foot-cell-color: $text-strong !default;
 
   // Inline
   li + li {
-    margin-top: 0.25em;
+    margin-top: .25em;
   }
 
   // Block
@@ -39,79 +36,79 @@ $content-table-foot-cell-color: $text-strong !default;
     }
   }
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: $content-heading-color;
-    font-weight: $content-heading-weight;
-    line-height: $content-heading-line-height;
-  }
-
-  h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-
-    &:not(:first-child) {
-      margin-top: 1em;
-    }
-  }
-
-  h2 {
-    font-size: 1.75em;
-    margin-bottom: 0.5714em;
-
-    &:not(:first-child) {
-      margin-top: 1.1428em;
-    }
-  }
-
-  h3 {
-    font-size: 1.5em;
-    margin-bottom: 0.6666em;
-
-    &:not(:first-child) {
-      margin-top: 1.3333em;
-    }
-  }
-
-  h4 {
-    font-size: 1.25em;
-    margin-bottom: 0.8em;
-  }
-
-  h5 {
-    font-size: 1.125em;
-    margin-bottom: 0.8888em;
-  }
-
-  h6 {
-    font-size: 1em;
-    margin-bottom: 1em;
-  }
+  // h1,
+  // h2,
+  // h3,
+  // h4,
+  // h5,
+  // h6 {
+  //   color: $content-heading-color;
+  //   font-weight: $content-heading-weight;
+  //   line-height: $content-heading-line-height;
+  // }
+  //
+  // h1 {
+  //   font-size: 2em;
+  //   margin-bottom: 0.5em;
+  //
+  //   &:not(:first-child) {
+  //     margin-top: 1em;
+  //   }
+  // }
+  //
+  // h2 {
+  //   font-size: 1.75em;
+  //   margin-bottom: 0.5714em;
+  //
+  //   &:not(:first-child) {
+  //     margin-top: 1.1428em;
+  //   }
+  // }
+  //
+  // h3 {
+  //   font-size: 1.5em;
+  //   margin-bottom: 0.6666em;
+  //
+  //   &:not(:first-child) {
+  //     margin-top: 1.3333em;
+  //   }
+  // }
+  //
+  // h4 {
+  //   font-size: 1.25em;
+  //   margin-bottom: 0.8em;
+  // }
+  //
+  // h5 {
+  //   font-size: 1.125em;
+  //   margin-bottom: 0.8888em;
+  // }
+  //
+  // h6 {
+  //   font-size: 1em;
+  //   margin-bottom: 1em;
+  // }
 
   blockquote {
+    padding: $content-blockquote-padding;
     background-color: $content-blockquote-background-color;
     border-left: $content-blockquote-border-left;
-    padding: $content-blockquote-padding;
   }
 
   ol {
-    list-style: decimal outside;
-    margin-left: 2em;
     margin-top: 1em;
+    margin-left: 2em;
+    list-style: decimal outside;
   }
 
   ul {
-    list-style: disc outside;
-    margin-left: 2em;
     margin-top: 1em;
+    margin-left: 2em;
+    list-style: disc outside;
 
     ul {
+      margin-top: .5em;
       list-style-type: circle;
-      margin-top: 0.5em;
 
       ul {
         list-style-type: square;
@@ -124,8 +121,8 @@ $content-table-foot-cell-color: $text-strong !default;
   }
 
   figure {
-    margin-left: 2em;
     margin-right: 2em;
+    margin-left: 2em;
     text-align: center;
 
     &:not(:first-child) {
@@ -146,12 +143,12 @@ $content-table-foot-cell-color: $text-strong !default;
   }
 
   pre {
-    @include overflow-touch;
-
-    overflow-x: auto;
     padding: $content-pre-padding;
-    white-space: pre;
+    overflow-x: auto;
     word-wrap: normal;
+    white-space: pre;
+
+    @include overflow-touch;
   }
 
   sup,
@@ -164,10 +161,10 @@ $content-table-foot-cell-color: $text-strong !default;
 
     td,
     th {
-      border: $content-table-cell-border;
-      border-width: $content-table-cell-border-width;
       padding: $content-table-cell-padding;
       vertical-align: top;
+      border: $content-table-cell-border;
+      border-width: $content-table-cell-border-width;
     }
 
     th {
@@ -184,16 +181,16 @@ $content-table-foot-cell-color: $text-strong !default;
     thead {
       td,
       th {
-        border-width: $content-table-head-cell-border-width;
         color: $content-table-head-cell-color;
+        border-width: $content-table-head-cell-border-width;
       }
     }
 
     tfoot {
       td,
       th {
-        border-width: $content-table-foot-cell-border-width;
         color: $content-table-foot-cell-color;
+        border-width: $content-table-foot-cell-border-width;
       }
     }
 
