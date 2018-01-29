@@ -1,0 +1,32 @@
+{
+  "name": "@tld/base-styles",
+  "version": "0.0.1",
+  "description": "My base styles that I use on every project",
+  "main": "scss/main.scss",
+  "scripts": {
+    "build": "gulp sass",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tommy Dunn <tommy@tommdunn.io> (https://tdunn.io/)",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tommydunn/tommys-base-css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tommydunn/tommys-base-css/issues"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "sass-convert": "^0.5.2"
+  },
+  "style": "css/main.css",
+  "files": [
+    "dist",
+    "scss",
+    "LICENSE",
+    "README.md"
+  ]
+}
