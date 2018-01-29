@@ -1,5 +1,5 @@
 {
-  "name": "@tld/base-styles",
+  "name": "tld-base-styles",
   "version": "0.0.1",
   "description": "My base styles that I use on every project",
   "main": "scss/main.scss",
