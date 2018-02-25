@@ -1,26 +1,10 @@
-$body-background-color: $white !default;
-$body-size: 16px !default;
 $body-rendering: optimizeLegibility !default;
-$body-family: $family-primary !default;
-$body-color: $text !default;
-$body-weight: $weight-normal !default;
-$body-line-height: 1.5 !default;
-$code-family: $family-code !default;
-$code-padding: .25em .5em .25em !default;
-$code-weight: normal !default;
-$code-size: .875em !default;
-$hr-background-color: $border !default;
-$hr-height: 1px !default;
-$hr-margin: 1.5rem 0 !default;
-$strong-color: $text-strong !default;
-$strong-weight: $weight-bold !default;
 
 html {
   min-width: 300px;
   overflow-x: hidden;
   overflow-y: scroll;
-  // font-size: $body-size;
-  background-color: $body-background-color;
+  background-color: $white;
 
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -43,53 +27,22 @@ button,
 input,
 select,
 textarea {
-  font-family: $body-family;
-}
-
-code,
-pre {
-  font-family: $code-family;
-
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
+  font-family: $base-font;
 }
 
 body {
-  font-size: 1rem;
-  font-weight: $body-weight;
-  line-height: $body-line-height;
-  color: $body-color;
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: $black;
 }
 
 // Inline
 
-a {
-  color: $link;
-  text-decoration: none;
-  cursor: pointer;
-
-  strong {
-    color: currentColor;
-  }
-
-  &:hover {
-    color: $link-hover;
-  }
-}
-
-code {
-  padding: $code-padding;
-  font-size: $code-size;
-  font-weight: $code-weight;
-  color: $code;
-  background-color: $code-background;
-}
-
 hr {
   display: block;
-  height: $hr-height;
-  margin: $hr-margin;
-  background-color: $hr-background-color;
+  height: 1px;
+  margin: 1.5rem 0;
+  background-color: $black;
   border: none;
 }
 
@@ -113,29 +66,7 @@ span {
 }
 
 strong {
-  font-weight: $strong-weight;
-  color: $strong-color;
-}
-
-// Block
-
-pre {
-  padding: 1.25rem 1.5rem;
-  overflow-x: auto;
-  font-size: .875em;
-  color: $pre;
-  word-wrap: normal;
-  white-space: pre;
-  background-color: $pre-background;
-
-  @include overflow-touch;
-
-  code {
-    padding: 0;
-    font-size: 1em;
-    color: currentColor;
-    background-color: transparent;
-  }
+  font-weight: 500;
 }
 
 table {
@@ -146,6 +77,6 @@ table {
   }
 
   th {
-    color: $text-strong;
+    color: $black;
   }
 }

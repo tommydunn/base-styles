@@ -1,8 +1,8 @@
 {
   "name": "tld-base-styles",
-  "version": "0.0.2",
+  "version": "1.0.2",
   "description": "My base styles that I use on every project",
-  "main": "scss/main.scss",
+  "main": "scss/tld-styles.scss",
   "scripts": {
     "build": "gulp sass",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,7 +22,7 @@
     "gulp-sass": "^3.1.0",
     "sass-convert": "^0.5.2"
   },
-  "style": "css/main.css",
+  "style": "css/tld-styles.css",
   "files": [
     "dist",
     "scss",
