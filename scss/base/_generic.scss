@@ -33,7 +33,7 @@ textarea {
 body {
   font-size: 1.2rem;
   font-weight: normal;
-  color: $black;
+  color: $light-black;
 }
 
 // Inline
@@ -42,7 +42,7 @@ hr {
   display: block;
   height: 1px;
   margin: 1.5rem 0;
-  background-color: $black;
+  background-color: $light-black;
   border: none;
 }
 
@@ -77,6 +77,6 @@ table {
   }
 
   th {
-    color: $black;
+    color: $light-black;
   }
 }

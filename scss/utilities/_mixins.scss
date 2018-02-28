@@ -54,7 +54,7 @@
   font-size: 0;
   vertical-align: top;
   cursor: pointer;
-  background-color: rgba($black, .2);
+  background-color: rgba($light-black, .2);
   border: none;
   border-radius: $radius-rounded;
   outline: none;
@@ -88,11 +88,11 @@
 
   &:hover,
   &:focus {
-    background-color: rgba($black, .3);
+    background-color: rgba($light-black, .3);
   }
 
   &:active {
-    background-color: rgba($black, .4);
+    background-color: rgba($light-black, .4);
   }
 
   // Sizes
