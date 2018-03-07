@@ -1,20 +1,15 @@
 @charset "utf-8";
 
 @import "utilities/variables";
-@import "utilities/functions";
-@import "utilities/animations";
 @import "utilities/mixins";
-@import "utilities/controls";
-@import "base/minireset";
-@import "base/generic";
+@import "base/modern-normalize";
+
 @import "base/helpers";
 @import "elements/box";
 @import "elements/container";
-@import "elements/content";
 @import "elements/image";
 @import "elements/title";
 @import "components/level";
-@import "components/media";
 @import "grid/columns";
 @import "grid/tiles";
 @import "layout/hero";
