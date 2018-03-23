@@ -19,7 +19,7 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-replace": "^0.6.1",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^3.2.0",
     "sass-convert": "^0.5.2"
   },
   "style": "css/tld-styles.css",
