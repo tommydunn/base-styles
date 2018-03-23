@@ -29,6 +29,8 @@
   }
 
   &.hero--large {
+    padding-top: 9rem;
+    padding-bottom: 9rem;
     @include tablet {
       .hero__body {
         padding-top: 18rem;

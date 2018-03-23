@@ -1623,10 +1623,13 @@ a.box:active {
     .hero.hero--medium .hero__body {
       padding-top: 9rem;
       padding-bottom: 9rem; } }
-  @media screen and (min-width: 769px), print {
-    .hero.hero--large .hero__body {
-      padding-top: 18rem;
-      padding-bottom: 18rem; } }
+  .hero.hero--large {
+    padding-top: 9rem;
+    padding-bottom: 9rem; }
+    @media screen and (min-width: 769px), print {
+      .hero.hero--large .hero__body {
+        padding-top: 18rem;
+        padding-bottom: 18rem; } }
   .hero.hero--halfheight .hero__body, .hero.hero--fullheight .hero__body {
     display: flex;
     align-items: center; }
