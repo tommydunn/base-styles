@@ -1,10 +1,13 @@
 {
   "name": "tld-base-styles",
-  "version": "1.0.5",
-  "description": "My base styles that I use on every project",
+  "version": "1.1.0",
+  "description": "My base styles that I use almost on every project",
   "main": "scss/tld-styles.scss",
   "scripts": {
-    "build": "gulp sass",
+    "build": "gulp build && gulp bump:minor",
+    "build:minor": "gulp bump:minor",
+    "build:major": "gulp bump:major && gulp sass",
+    "build:patch": "gulp bump:patch && gulp sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Tommy Dunn <tommy@tommdunn.io> (https://tdunn.io/)",
@@ -17,7 +20,11 @@
     "url": "https://github.com/tommydunn/base-css/issues"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-bump": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.6.1",
     "gulp-sass": "^3.2.0",
     "sass-convert": "^0.5.2"
