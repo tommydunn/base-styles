@@ -29,12 +29,16 @@
   }
 
   &.hero--large {
-    padding-top: 9rem;
-    padding-bottom: 9rem;
     @include tablet {
       .hero__body {
         padding-top: 18rem;
         padding-bottom: 18rem;
+      }
+    }
+    @media(max-width: $tablet) {
+      .hero__body {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
       }
     }
   }

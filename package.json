@@ -1,6 +1,6 @@
 {
   "name": "tld-base-styles",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "My base styles that I use almost on every project",
   "main": "scss/tld-styles.scss",
   "scripts": {
