@@ -31,8 +31,14 @@
   &.hero--large {
     @include tablet {
       .hero__body {
-        padding-top: 18rem;
-        padding-bottom: 18rem;
+        padding-top: 13rem;
+        padding-bottom: 13rem;
+      }
+    }
+    @include desktop {
+      .hero__body {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
       }
     }
     @media(max-width: $tablet) {
