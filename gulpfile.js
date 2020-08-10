@@ -14,7 +14,7 @@ const gulp = require("gulp"),
       .pipe(sass().on('error', sass.logError))
       .pipe(gulp.dest('./dist'));
   });
-  
+
 gulp.task('css:min', function () {
   return gulp.src('./scss/tld-styles.scss')
     .pipe(sass({outputStyle: 'compressed'}))
@@ -23,7 +23,7 @@ gulp.task('css:min', function () {
       title: "Error running something"
     }))
     .pipe(autoPrefixer({
-      browsers: ['last 3 versions'],
+      overrideBrowserslist: ['last 3 versions'],
       cascade: false
     }))
     .pipe(rename({
