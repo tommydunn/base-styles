@@ -1,62 +1,69 @@
-'use strict';
+import gulp from 'gulp';
+import gulpSass from 'gulp-sass';
+import dartSass from 'sass';
+import del from 'del';
+import plumber from 'gulp-plumber';
+import terser from 'gulp-terser';
+import rename from 'gulp-rename';
+import sourcemaps from 'gulp-sourcemaps';
+import concat from 'gulp-concat';
+import mergeStream from 'merge-stream';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import replace from 'gulp-replace';
 
-const gulp = require("gulp"),
-  replace = require('gulp-replace'),
-  converter = require('sass-convert'),
-  bump = require('gulp-bump'),
-  autoPrefixer = require('gulp-autoprefixer'),
-  rename = require('gulp-rename'),
-  notify = require('gulp-notify'),
-  sass = require('gulp-sass');
+const sass = gulpSass(dartSass);
 
-  gulp.task('css', function () {
-    return gulp.src('./scss/tld-styles.scss')
-      .pipe(sass().on('error', sass.logError))
-      .pipe(gulp.dest('./dist'));
-  });
+  const config = {
+    srcDir: 'scss/',
+    distDir: 'dist/'
+  }
 
-gulp.task('css:min', function () {
-  return gulp.src('./scss/tld-styles.scss')
-    .pipe(sass({outputStyle: 'compressed'}))
-    .on("error", notify.onError({
-      message: "Error: <%= error.message %>",
-      title: "Error running something"
-    }))
-    .pipe(autoPrefixer({
-      overrideBrowserslist: ['last 3 versions'],
-      cascade: false
-    }))
-    .pipe(rename({
-      suffix: '.min'
-    }))
-    .pipe(gulp.dest('./dist'));
-});
+const paths = {
+  distributables: 'dist/',
+  documents: {
+    source: 'scss/',
+    destination: 'dist/',
+  }
+}
 
-gulp.task('bump:major', function () {
-  var options = {
-    type: 'major'
-  };
-  return gulp.src('./package.json')
-    .pipe(bump(options))
-    .pipe(gulp.dest('./'));
-});
+function clean(done) {
+  del.sync([config.distDir]);
+  return done();
+}
 
-gulp.task('bump:minor', function () {
-  var options = {
-    type: 'minor'
-  };
-  return gulp.src('./package.json')
-    .pipe(bump(options))
-    .pipe(gulp.dest('./'));
-});
+function styles() {
+  // sass.sync() is faster than sass(): https://github.com/dlmanning/gulp-sass
+  return gulp
+    .src(`${config.srcDir}/**/*.scss`)
+    // .pipe(sourcemaps.init())
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(postcss([autoprefixer({ cascade: false })]))
+    // .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(config.distDir))
+}
 
-gulp.task('bump:patch', function () {
-  var options = {
-    type: 'patch'
-  };
-  return gulp.src('./package.json')
-    .pipe(bump(options))
-    .pipe(gulp.dest('./'));
-});
+function optimizeStyles() {
+  return gulp
+    .src(`${config.distDir}/**/*.css`)
+    .pipe(postcss([cssnano()]))
+    // .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest(config.distDir))
+}
 
-gulp.task('build', gulp.series('css', 'css:min'));
+const build = gulp.series(
+  gulp.parallel(styles),
+  gulp.parallel(optimizeStyles)
+)
+
+const prod = gulp.series(clean, build);
+
+export {
+  clean,
+  styles,
+  optimizeStyles,
+  prod
+}
+export default build
+

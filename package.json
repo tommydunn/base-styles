@@ -1,39 +1,55 @@
 {
-  "name": "tld-base-styles",
-  "version": "1.4.0",
-  "description": "My base styles that I use almost on every project",
-  "main": "scss/tld-styles.scss",
-  "scripts": {
-    "build": "gulp build && gulp bump:minor",
-    "build:minor": "gulp bump:minor",
-    "build:major": "gulp bump:major && gulp sass",
-    "build:patch": "gulp bump:patch && gulp sass",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Tommy Dunn <tommy@tommdunn.io> (https://tdunn.io/)",
-  "license": "ISC",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tommydunn/base-css.git"
-  },
-  "bugs": {
-    "url": "https://github.com/tommydunn/base-css/issues"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-bump": "^3.2.0",
-    "gulp-notify": "^3.2.0",
-    "gulp-rename": "^2.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^3.2.0",
-    "sass-convert": "^0.5.2"
-  },
-  "style": "css/tld-styles.css",
-  "files": [
-    "dist",
-    "scss",
-    "LICENSE",
-    "README.md"
-  ]
+	"name": "tld-base-styles",
+	"version": "1.5.0",
+	"description": "My base styles that I use almost on every project",
+	"main": "scss/tld-styles.scss",
+	"type": "module",
+	"scripts": {
+		"build": "gulp prod",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"update-packages": "npx npm-check-updates -u",
+		"tasks": "gulp --tasks",
+		"clean": "gulp clean"
+	},
+	"author": "Tommy Dunn <tommy@tommdunn.io> (https://www.tommydunn.io/)",
+	"license": "ISC",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tommydunn/base-styles.git"
+	},
+	"bugs": {
+		"url": "https://github.com/tommydunn/base-styles/issues"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.12",
+		"cssnano": "^5.1.13",
+		"del": "^6.0.0",
+		"gulp": "^4.0.2",
+		"gulp-concat": "^2.6.1",
+		"gulp-postcss": "^9.0.1",
+		"gulp-rename": "^2.0.0",
+		"gulp-replace": "^1.1.3",
+		"gulp-sass": "^5.1.0",
+		"gulp-sourcemaps": "^3.0.0",
+		"gulp-terser": "^2.1.0",
+		"merge-stream": "^2.0.0",
+		"postcss": "^8.4.18",
+		"sass": "^1.55.0"
+	},
+	"browserslist": [
+		"last 7 version"
+	],
+	"optionalDependencies": {
+		"nodemon": "^2.0.20"
+	},
+	"dependencies": {
+		"gulp-plumber": "^1.2.1"
+	},
+	"style": "css/tld-styles.css",
+	"files": [
+		"dist",
+		"scss",
+		"LICENSE",
+		"README.md"
+	]
 }
